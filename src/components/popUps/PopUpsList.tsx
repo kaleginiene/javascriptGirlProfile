@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { AboutMePopUp, InstructionsPopUp, IntroPopUp } from "./components";
+import {
+  AboutMePopUp,
+  InstructionsPopUp,
+  IntroPopUp,
+  JobExpPopUp,
+} from "./components";
 import { AvailablePopUps } from "./popUpTypes";
 
 interface PopUpsListProps {
@@ -13,6 +18,8 @@ export const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
   useEffect(() => {
     if (currentStage === 1 && currentPopUpKey !== AvailablePopUps.initial) {
       setCurrentPopUpKey(AvailablePopUps.aboutMe);
+    } else if (currentStage === 2) {
+      setCurrentPopUpKey(AvailablePopUps.jobExperience);
     }
   }, [currentStage]);
 
@@ -30,6 +37,9 @@ export const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
       )}
       {currentPopUpKey === AvailablePopUps.aboutMe && (
         <AboutMePopUp onNextButtonClick={() => setCurrentPopUpKey(null)} />
+      )}
+      {currentPopUpKey === AvailablePopUps.jobExperience && (
+        <JobExpPopUp onNextButtonClick={() => setCurrentPopUpKey(null)} />
       )}
     </>
   );
