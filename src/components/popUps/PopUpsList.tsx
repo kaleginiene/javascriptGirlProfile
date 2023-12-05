@@ -4,6 +4,7 @@ import {
   InstructionsPopUp,
   IntroPopUp,
   JobExpPopUp,
+  SideWorkPopUp,
 } from "./components";
 import { AvailablePopUps } from "./popUpTypes";
 
@@ -20,6 +21,8 @@ export const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
       setCurrentPopUpKey(AvailablePopUps.aboutMe);
     } else if (currentStage === 2) {
       setCurrentPopUpKey(AvailablePopUps.jobExperience);
+    } else if (currentStage === 3) {
+      setCurrentPopUpKey(AvailablePopUps.sideWork);
     }
   }, [currentStage]);
 
@@ -33,13 +36,20 @@ export const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
         />
       )}
       {currentPopUpKey === AvailablePopUps.instructions && (
-        <InstructionsPopUp onNextButtonClick={() => setCurrentPopUpKey(null)} />
+        <InstructionsPopUp
+          onNextButtonClick={() =>
+            setCurrentPopUpKey(AvailablePopUps.jobExperience)
+          }
+        />
       )}
       {currentPopUpKey === AvailablePopUps.aboutMe && (
         <AboutMePopUp onNextButtonClick={() => setCurrentPopUpKey(null)} />
       )}
       {currentPopUpKey === AvailablePopUps.jobExperience && (
         <JobExpPopUp onNextButtonClick={() => setCurrentPopUpKey(null)} />
+      )}
+      {currentPopUpKey === AvailablePopUps.sideWork && (
+        <SideWorkPopUp onNextButtonClick={() => setCurrentPopUpKey(null)} />
       )}
     </>
   );

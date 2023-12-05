@@ -6,7 +6,7 @@ const TextBox: React.FC = () => (
   <>
     <p>After ~9 years in sales (😱), I switched my career to programming. 👩‍💻</p>
     <p className="mb-2">
-      I've been coding 4 years with JavaScript and still can get enough.
+      I've been coding 4 years with JavaScript and still can't get enough.
     </p>
     <p className="mb-1 font-bold">My Tech Stack:</p>
     <ul>
@@ -17,7 +17,7 @@ const TextBox: React.FC = () => (
       </li>
       <li className="list-disc">GitLab / BitBucket/ GitHub</li>
       <li className="list-disc">Instabug/ Sentry</li>
-      <li className="list-disc">Jest/ Redux/ Axios / i18bext</li>
+      <li className="list-disc">Jest/ Redux/ Axios / i18next/ Three.js</li>
       <li className="list-disc">Figma</li>
       <li className="list-disc">Firebase</li>
     </ul>

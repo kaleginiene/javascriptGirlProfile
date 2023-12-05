@@ -7,4 +7,5 @@ export enum AvailablePopUps {
   initial,
   instructions,
   jobExperience,
+  sideWork,
 }

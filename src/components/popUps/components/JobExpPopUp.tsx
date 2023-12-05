@@ -7,7 +7,7 @@ const TextBox: React.FC = () => (
     <h2 className="text-lg font-medium mb-2">Job Experience</h2>
     <div className="flex gap-3">
       <p>2022.10 - 2023-12</p>
-      <p className="font-medium">React Native Engineer</p>
+      <p className="font-medium">React Native Engineer @Kilo Health</p>
     </div>
     <p className="font-medium">
       I co-built an amazing app from scratch with a senior-level colleague. It
@@ -16,7 +16,7 @@ const TextBox: React.FC = () => (
     </p>{" "}
     <div className="flex gap-3 mt-3">
       <p>2021.02 - 2022-10</p>
-      <p className="font-medium">Front-end Engineer</p>
+      <p className="font-medium">Front-end Engineer @Kilo Health</p>
     </div>
     <p className="font-medium">
       🔧 Developed 13 sales funnels from scratch, leading 5 of them. 🎨 Led the

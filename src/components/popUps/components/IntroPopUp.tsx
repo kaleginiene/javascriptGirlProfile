@@ -5,7 +5,8 @@ import { PopUpProps } from "../popUpTypes";
 const TextBox: React.FC = () => (
   <>
     <p className="mb-3">
-      Hello, my name is <b>Ieva</b>. 👩‍💻
+      Hello, my name is <b>Ieva</b>. I am Lithuanian JavaSript girl based in
+      Vilnius 👩‍💻
     </p>
     <p>
       Welcome to my 3D world! Here You will find everything about my profesional
@@ -20,7 +21,7 @@ interface CtaBoxProps {
 
 const CtaBox: React.FC<CtaBoxProps> = ({ onClick }) => (
   <button onClick={onClick} className="neo-brutalism-white neo-btn">
-    Let's check it out!
+    Check it out!
   </button>
 );
 
