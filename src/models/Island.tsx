@@ -16,9 +16,9 @@ import islandScene from "../assets/3d/island.glb";
 import { Group, Object3DEventMap } from "three";
 
 export interface ModelProps {
-  position: [number, number, number];
-  rotation: [number, number, number];
-  scale: [number, number, number];
+  position?: [number, number, number];
+  rotation?: [number, number, number];
+  scale?: [number, number, number];
   isRotating?: boolean;
 }
 

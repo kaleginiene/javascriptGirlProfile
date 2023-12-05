@@ -7,6 +7,7 @@ import Island from "./models/Island";
 import Sky from "./models/Sky";
 import Bird from "./models/Bird";
 import Plane from "./models/Plane";
+import { PopUpsList } from "./components/popUps/PopUpsList";
 
 type XYZParams = [number, number, number];
 
@@ -48,8 +49,11 @@ export const App: React.FC = () => {
 
   const [planeScale, planePosition] = adjustPlaneForScreenSize();
 
+  console.log(currentStage);
+
   return (
     <section className="w-full h-screen relative">
+      <PopUpsList currentStage={currentStage} />
       <Canvas
         camera={{
           near: 0.1,
@@ -69,7 +73,6 @@ export const App: React.FC = () => {
             groundColor="#000000"
             intensity={1}
           />
-          <Bird />
 
           <Sky isRotating={isRotating} />
           <Island
