@@ -46,7 +46,9 @@ const CtaBox: React.FC<CtaBoxProps> = ({ onOkClick }) => (
 export const SideWorkPopUp: React.FC<PopUpProps> = ({ onNextButtonClick }) => {
   return (
     <>
-      <div className={`absolute top-28 md:right-28 z-10 md:max-w-xxl max-w-l`}>
+      <div
+        className={`absolute top-28 md:left-[200px] z-10 md:max-w-xxl max-w-l`}
+      >
         <BasePopUp
           textBox={<TextBox />}
           ctaBox={<CtaBox onOkClick={onNextButtonClick} />}

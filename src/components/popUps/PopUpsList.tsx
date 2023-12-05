@@ -7,6 +7,7 @@ import {
   SideWorkPopUp,
 } from "./components";
 import { AvailablePopUps } from "./popUpTypes";
+import { ContactsPopUp } from "./components/ContactsPopUp";
 
 interface PopUpsListProps {
   currentStage: number | null;
@@ -23,6 +24,8 @@ export const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
       setCurrentPopUpKey(AvailablePopUps.jobExperience);
     } else if (currentStage === 3) {
       setCurrentPopUpKey(AvailablePopUps.sideWork);
+    } else if (currentStage === 4) {
+      setCurrentPopUpKey(AvailablePopUps.contacts);
     }
   }, [currentStage]);
 
@@ -37,9 +40,7 @@ export const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
       )}
       {currentPopUpKey === AvailablePopUps.instructions && (
         <InstructionsPopUp
-          onNextButtonClick={() =>
-            setCurrentPopUpKey(AvailablePopUps.jobExperience)
-          }
+          onNextButtonClick={() => setCurrentPopUpKey(AvailablePopUps.aboutMe)}
         />
       )}
       {currentPopUpKey === AvailablePopUps.aboutMe && (
@@ -50,6 +51,9 @@ export const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
       )}
       {currentPopUpKey === AvailablePopUps.sideWork && (
         <SideWorkPopUp onNextButtonClick={() => setCurrentPopUpKey(null)} />
+      )}
+      {currentPopUpKey === AvailablePopUps.contacts && (
+        <ContactsPopUp onNextButtonClick={() => setCurrentPopUpKey(null)} />
       )}
     </>
   );
