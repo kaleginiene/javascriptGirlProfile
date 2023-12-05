@@ -10,7 +10,7 @@ const TextBox: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => (
         a mouse
       </p>
     ) : (
-      <p>To move the 3D model spin it around </p>
+      <p>To move the 3D model spin it around SLOWLY </p>
     )}
   </>
 );

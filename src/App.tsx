@@ -1,12 +1,12 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useState } from "react";
 import "./index.css";
 
 import { Canvas } from "@react-three/fiber";
 import { Loader } from "./components/Loader";
 import Island from "./models/Island";
 import Sky from "./models/Sky";
-import Bird from "./models/Bird";
 import Plane from "./models/Plane";
+import Balloon from "./models/Balloon";
 import { PopUpsList } from "./components/popUps/PopUpsList";
 
 type XYZParams = [number, number, number];
@@ -37,10 +37,10 @@ export const App: React.FC = () => {
     let screenPosition: XYZParams;
 
     if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
+      screenScale = [0.2, 0.2, 0.2];
       screenPosition = [0, -1.5, 0];
     } else {
-      screenScale = [3, 3, 3];
+      screenScale = [0.3, 0.3, 0.3];
       screenPosition = [0, -4, -4];
     }
 
@@ -75,6 +75,12 @@ export const App: React.FC = () => {
           />
 
           <Sky isRotating={isRotating} />
+          <Balloon
+            isRotating={isRotating}
+            position={[1, 1, 1]}
+            scale={[0.9, 0.9, 0.9]}
+            rotation={[0, 0, 0]}
+          />
           <Island
             setCurrentStage={setCurrentStage}
             rotation={islandRotation}

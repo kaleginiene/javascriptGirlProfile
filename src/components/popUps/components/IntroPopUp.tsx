@@ -28,7 +28,7 @@ const CtaBox: React.FC<CtaBoxProps> = ({ onClick }) => (
 export const IntroPopUp: React.FC<PopUpProps> = ({ onNextButtonClick }) => {
   return (
     <>
-      <div className="absolute md:top-28 top-3 md:left-0 -left-5 right-0 z-10 max-w-md">
+      <div className="absolute md:top-28 top-3 md:left-0 -left-5 right-0 z-10 md:max-w-md w-full">
         <BasePopUp
           textBox={<TextBox />}
           ctaBox={<CtaBox onClick={onNextButtonClick} />}

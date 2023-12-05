@@ -36,6 +36,8 @@ const Island: React.FC<IslandProps> = ({
   const islandRef = useRef<Ref<Group<Object3DEventMap>> | null>(null);
 
   const { gl, viewport } = useThree();
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
   const { nodes, materials } = useGLTF(islandScene);
 
   // Last horizontal mouse position;

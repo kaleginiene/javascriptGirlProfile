@@ -15,9 +15,9 @@ const TextBox: React.FC = () => (
       <li className="list-disc">
         CSS/ SCSS/ styled-components/ Tailwind/ Material UI
       </li>
+      <li className="list-disc">Jest/ Redux/ Axios / i18next/ Three.js</li>
       <li className="list-disc">GitLab / BitBucket/ GitHub</li>
       <li className="list-disc">Instabug/ Sentry</li>
-      <li className="list-disc">Jest/ Redux/ Axios / i18next/ Three.js</li>
       <li className="list-disc">Figma</li>
       <li className="list-disc">Firebase</li>
     </ul>

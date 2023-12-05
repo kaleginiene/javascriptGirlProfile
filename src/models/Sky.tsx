@@ -7,7 +7,7 @@ import { ModelProps } from "./Island";
 import { useFrame } from "@react-three/fiber";
 
 const Sky: React.FC<ModelProps> = ({ isRotating }) => {
-  const sky = useGLTF(skyScene);
+  const sky: any = useGLTF(skyScene);
   const skyRef = useRef<any>();
 
   useFrame((_, delta) => {
