@@ -6,8 +6,7 @@ import Island from "../../models/Island";
 import Sky from "../../models/Sky";
 import Plane from "../../models/Plane";
 import Balloon from "../../models/Balloon";
-
-import { use3DModels } from "./use3Dmodels";
+import { use3DModels } from "./use3DModels";
 
 const ThreeDWorld: React.FC = () => {
   const {
