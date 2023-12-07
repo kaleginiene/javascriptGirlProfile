@@ -176,13 +176,13 @@ body:has(.card[data-color="green"]:hover) {
   position: relative;
   border-radius: 10px;
   border: #2b77e7;
-  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
-    0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+  box-shadow: 0.6vmin 0.6vmin #336cc1, 0.3vmin 0.3vmin #0092db,
+    0.3vmin 0.3vmin #0092db, 0.65vmin 0.3vmin #0092db, 0.3vmin 0.65vmin #0092db;
 }
 
 .neo-brutalism-white {
   background: #fff;
   border: #fff;
-  box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
-    0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+  box-shadow: 0.6vmin 0.6vmin #fff, 0.3vmin 0.3vmin #d2e4ff,
+    0.3vmin 0.3vmin #d2e4ff, 0.65vmin 0.3vmin #d2e4ff, 0.3vmin 0.65vmin #d2e4ff;
 }

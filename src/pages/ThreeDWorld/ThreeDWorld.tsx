@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 
-import { Loader, PopUpsList } from "../../components";
+import { Header, Loader, PopUpsList } from "../../components";
 import Island from "../../models/Island";
 import Sky from "../../models/Sky";
 import Plane from "../../models/Plane";
@@ -10,11 +10,15 @@ import { use3DModels } from "./use3DModels";
 
 const ThreeDWorld: React.FC = () => {
   const {
+    balloonPosition,
+    balloonRotation,
+    balloonScale,
     islandScale,
     islandPosition,
     islandRotation,
     planeScale,
     planePosition,
+    planeRotation,
     isRotating,
     currentStage,
     setIsRotating,
@@ -23,6 +27,7 @@ const ThreeDWorld: React.FC = () => {
 
   return (
     <section className="w-full h-screen relative">
+      <Header />
       <PopUpsList currentStage={currentStage} />
       <Canvas
         camera={{
@@ -35,8 +40,7 @@ const ThreeDWorld: React.FC = () => {
       >
         <Suspense fallback={<Loader />}>
           <directionalLight position={[1, 1, 1]} intensity={2} />
-          {/* Ambient light illuminates all the objects */}
-          <ambientLight intensity={0.5} />
+          <ambientLight intensity={0.2} />
           <spotLight />
           <hemisphereLight
             color="#b1e1FF"
@@ -47,9 +51,9 @@ const ThreeDWorld: React.FC = () => {
           <Sky isRotating={isRotating} />
           <Balloon
             isRotating={isRotating}
-            position={[1, 1, 1]}
-            scale={[0.9, 0.9, 0.9]}
-            rotation={[0, 0, 0]}
+            position={balloonPosition}
+            scale={balloonScale}
+            rotation={balloonRotation}
           />
           <Island
             setCurrentStage={setCurrentStage}
@@ -63,7 +67,7 @@ const ThreeDWorld: React.FC = () => {
             isRotating={isRotating}
             position={planePosition}
             scale={planeScale}
-            rotation={[0, 20, 0]}
+            rotation={planeRotation}
           />
         </Suspense>
       </Canvas>

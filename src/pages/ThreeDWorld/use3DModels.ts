@@ -8,6 +8,10 @@ interface Use3DModelsReturn {
   islandRotation: XYZParams;
   planeScale: XYZParams;
   planePosition: XYZParams;
+  planeRotation: XYZParams;
+  balloonPosition: XYZParams;
+  balloonRotation: XYZParams;
+  balloonScale: XYZParams;
   isRotating: boolean;
   currentStage: number | null;
   setIsRotating: Dispatch<SetStateAction<boolean>>;
@@ -38,6 +42,7 @@ export const use3DModels = (): Use3DModelsReturn => {
   const adjustPlaneForScreenSize = (): XYZParams[] => {
     let screenScale: XYZParams;
     let screenPosition: XYZParams;
+    const ROTATION: XYZParams = [0, 20, 0];
 
     if (window.innerWidth < 768) {
       screenScale = [0.2, 0.2, 0.2];
@@ -47,17 +52,31 @@ export const use3DModels = (): Use3DModelsReturn => {
       screenPosition = [0, -4, -4];
     }
 
-    return [screenScale, screenPosition];
+    return [screenScale, screenPosition, ROTATION];
   };
 
-  const [planeScale, planePosition] = adjustPlaneForScreenSize();
+  const [planeScale, planePosition, planeRotation] = adjustPlaneForScreenSize();
+
+  const {
+    balloonPosition,
+    balloonRotation,
+    balloonScale,
+  }: Record<string, XYZParams> = {
+    balloonRotation: [0, 0, 0],
+    balloonScale: [0.9, 0.9, 0.9],
+    balloonPosition: [1, 1, 1],
+  };
 
   return {
+    balloonPosition,
+    balloonRotation,
+    balloonScale,
     islandScale,
     islandPosition,
     islandRotation,
     planeScale,
     planePosition,
+    planeRotation,
     isRotating,
     currentStage,
     setIsRotating,

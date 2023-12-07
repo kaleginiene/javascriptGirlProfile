@@ -13,6 +13,7 @@ export default {
         },
         blue: {
           500: "#2b77e7",
+          300: "#71B7EB",
         },
       },
       fontFamily: {

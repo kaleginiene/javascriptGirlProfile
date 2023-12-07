@@ -1,6 +1,8 @@
 import React from "react";
 import { BasePopUp } from "./BasePopPup";
 import { PopUpProps } from "../popUpTypes";
+import { useNavigate } from "react-router-dom";
+import { RouteNames } from "../../../routes/routes";
 
 const TextBox: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => (
   <>
@@ -34,7 +36,12 @@ const CtaBox: React.FC<CtaBoxProps> = ({ onClassicCVClick, onOkClick }) => (
 export const InstructionsPopUp: React.FC<PopUpProps> = ({
   onNextButtonClick,
 }) => {
+  const navigate = useNavigate();
   const isDesktop: boolean = window.screen.width > 768;
+
+  const navigateToProfilePage = (): void => {
+    navigate(RouteNames.profile);
+  };
 
   return (
     <>
@@ -43,7 +50,7 @@ export const InstructionsPopUp: React.FC<PopUpProps> = ({
           textBox={<TextBox isDesktop={isDesktop} />}
           ctaBox={
             <CtaBox
-              onClassicCVClick={() => console.log("navigate to classic")}
+              onClassicCVClick={navigateToProfilePage}
               onOkClick={onNextButtonClick}
             />
           }
