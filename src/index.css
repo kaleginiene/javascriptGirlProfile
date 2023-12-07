@@ -9,6 +9,11 @@
   --green-rgb: 125 161 35;
 }
 
+.root {
+  position: fixed;
+  overflow: hidden;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
 }

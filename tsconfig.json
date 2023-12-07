@@ -21,11 +21,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "src/*": ["src/*"]
     }
   },
 
-  "include": ["src", "index.d.ts"],
+  "include": ["src/**/*", "index.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
