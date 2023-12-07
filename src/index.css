@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,7 +18,7 @@
 }
 
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Playfair Display Sans", sans-serif;
 }
 
 body:has(.card[data-color="blue"]:hover) {
@@ -81,6 +84,10 @@ body:has(.card[data-color="green"]:hover) {
 
   .cta-text {
     @apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
+  }
+
+  .profile-btn {
+    @apply bg-pink-300 py-3 px-6 rounded-lg font-nunito font-medium text-center;
   }
 }
 
