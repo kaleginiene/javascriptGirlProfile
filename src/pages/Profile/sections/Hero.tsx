@@ -22,11 +22,13 @@ export const Hero: React.FC = () => {
             More of my professional content you will find on Linkedin
           </p>
           <a href={SocialMedia.linkedin} target="_blank">
-            <div className="w-[150px] m-auto md:m-0 profile-btn">Linkedin</div>
+            <div className="w-[250px] m-auto md:m-0 profile-btn">
+              Let's connect on Linkedin
+            </div>
           </a>
         </div>
       </div>
-      <div className="md:absolute md:max-w-[772px] md:top-0 md:right-0 xxl:right-28 z-[-1]">
+      <div className="md:absolute md:max-w-[800px] md:top-0 md:right-0 xxl:right-28 z-[-1]">
         <img src={heroImage} alt="Ieva Kaleginiene photo" />
       </div>
     </section>

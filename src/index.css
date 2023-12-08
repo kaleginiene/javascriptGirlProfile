@@ -87,7 +87,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .profile-btn {
-    @apply bg-pink-300 py-3 px-6 rounded-lg font-nunito font-medium text-center;
+    @apply bg-pink-300 py-3 px-6 rounded-lg font-nunito font-medium text-center text-white;
   }
 }
 
@@ -192,4 +192,8 @@ body:has(.card[data-color="green"]:hover) {
   border: #fff;
   box-shadow: 0.6vmin 0.6vmin #fff, 0.3vmin 0.3vmin #d2e4ff,
     0.3vmin 0.3vmin #d2e4ff, 0.65vmin 0.3vmin #d2e4ff, 0.3vmin 0.65vmin #d2e4ff;
+}
+
+.profile-btn {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
