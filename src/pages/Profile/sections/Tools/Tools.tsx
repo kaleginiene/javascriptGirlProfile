@@ -19,17 +19,17 @@ export const Tools: React.FC = () => {
     <section className="py-8">
       <div className="container">
         <h2 className="mb-8 text-center font-playFair text-4xl font-bold">
-          Skills
+          Technical Skills
         </h2>
         <div className="container m-auto">
           <div className="grid grid-cols-7 gap-4 mb-4">
             {LANGS_FRAMEWORKS.map((item) => renderCard(item))}
           </div>
           <div className="grid grid-cols-7 gap-4 mb-4">
-            {STYLING_TOOLS.map((item) => renderCard(item))}
+            {PACKAGES.map((item) => renderCard(item))}
           </div>
           <div className="grid grid-cols-7 gap-4 mb-4">
-            {PACKAGES.map((item) => renderCard(item))}
+            {STYLING_TOOLS.map((item) => renderCard(item))}
           </div>
         </div>
       </div>

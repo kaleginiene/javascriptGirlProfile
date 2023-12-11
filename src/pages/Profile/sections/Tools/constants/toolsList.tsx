@@ -15,6 +15,12 @@ import axiosIcon from "../../../../../assets/icons/profile/tools/axiosIcon.svg";
 import figmaIcon from "../../../../../assets/icons/profile/tools/figmaIcon.svg";
 import threeJsIcon from "../../../../../assets/icons/profile/tools/threejsIcon.svg";
 import firebaseIcon from "../../../../../assets/icons/profile/tools/firebaseIcon.svg";
+import jestIcon from "../../../../../assets/icons/profile/tools/jestIcon.svg";
+import i18Icon from "../../../../../assets/icons/profile/tools/i18nextIcon.svg";
+import sentryIcon from "../../../../../assets/icons/profile/tools/sentryIcon.svg";
+import instabugIcon from "../../../../../assets/icons/profile/tools/instabugIcon.svg";
+import githubIcon from "../../../../../assets/icons/profile/tools/gitHubIcon.svg";
+import gitlabIcon from "../../../../../assets/icons/profile/tools/gitlabIcon.svg";
 
 export interface TOOL {
   icon: string;
@@ -118,6 +124,36 @@ export const PACKAGES: TOOL[] = [
   {
     icon: firebaseIcon,
     title: "FireBase",
+    backgroundColor: "bg-purple-500",
+  },
+  {
+    icon: jestIcon,
+    title: "Jest",
+    backgroundColor: "bg-purple-500",
+  },
+  {
+    icon: i18Icon,
+    title: "i18next",
+    backgroundColor: "bg-purple-500",
+  },
+  {
+    icon: sentryIcon,
+    title: "Sentry",
+    backgroundColor: "bg-purple-500",
+  },
+  {
+    icon: instabugIcon,
+    title: "Instabug",
+    backgroundColor: "bg-purple-500",
+  },
+  {
+    icon: githubIcon,
+    title: "GitHub",
+    backgroundColor: "bg-purple-500",
+  },
+  {
+    icon: gitlabIcon,
+    title: "GitLab",
     backgroundColor: "bg-purple-500",
   },
 ];
