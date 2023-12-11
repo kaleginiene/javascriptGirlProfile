@@ -1,4 +1,4 @@
-import { TimeLineEvent } from "../../../components";
+import { TimeLineEvent } from "../../../../../components";
 
 export const JOB_EXPERIENCE: TimeLineEvent[] = [
   {
@@ -31,12 +31,11 @@ export const JOB_EXPERIENCE: TimeLineEvent[] = [
           perspective.
           <br /> 💻 Created a web app from scratch, catering to up to 30k users.
           I took the lead on the front-end part to ensure a smooth release
-          process.As
+          process.
         </p>
         <p className="mb-2 text-base font-normal text-gray-500 dark:text-gray-400">
-          Tools I used: 🔹 React 🔹 Gatsby 🔹 NextJs 🔹 TypeScript 🔹 Redux
-          Toolkit, Redux Sagas 🔹 Axios 🔹 i18next 🔹 Jest 🔹 Styled-components
-          🔹 Sentry
+          Tools: 🔹 React 🔹 Gatsby 🔹 NextJs 🔹 TypeScript 🔹 Redux Toolkit,
+          Redux Sagas 🔹 Axios 🔹 i18next 🔹 Jest 🔹 Styled-components 🔹 Sentry
         </p>
       </div>
     ),
