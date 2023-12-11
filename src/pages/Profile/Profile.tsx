@@ -1,5 +1,5 @@
 import { ProfileHeader } from "../../components";
-import { Hero, Statistics } from "./sections";
+import { Hero, JobExperience, Statistics } from "./sections";
 
 const Profile: React.FC = () => {
   return (
@@ -7,6 +7,7 @@ const Profile: React.FC = () => {
       <ProfileHeader />
       <Hero />
       <Statistics />
+      <JobExperience />
     </>
   );
 };

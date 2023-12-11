@@ -5,14 +5,14 @@ export const Hero: React.FC = () => {
   return (
     <section className="flex md:block flex-col-reverse font-nunito">
       <div className="md:max-w-[1200px] md:min-h-[500px] m-auto md:flex items-center">
-        <div className="md:max-w-[550px] px-4 md:px-0 text-center md:text-left">
+        <div className="md:max-w-[570px] px-4 text-center md:text-left">
           <p className="uppercase text-2xl mb-[12px] text-pink-300 font-bold mt-6 md:mt-0">
             JavaScript engineer
           </p>
           <h1 className="font-playFair text-4xl md:text-6xl mb-4 font-bold leading-tight ">
-            Hello, my name
-            <br />
-            is Ieva Kaleginienė
+            Hello World,
+            <br /> my name is <br />
+            Ieva Kaleginienė
           </h1>
           <p className="mb-2 text-gray-300 text-xl md:text-2xl ">
             I switched from sales to programming 4 years ago and still can't get

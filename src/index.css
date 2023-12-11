@@ -89,6 +89,10 @@ body:has(.card[data-color="green"]:hover) {
   .profile-btn {
     @apply bg-pink-300 py-3 px-6 rounded-lg font-nunito font-medium text-center text-white;
   }
+
+  .container {
+    @apply md:max-w-[1200px] md:m-auto md:px-4;
+  }
 }
 
 .glassmorphism {
