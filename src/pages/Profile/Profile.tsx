@@ -1,4 +1,4 @@
-import { ProfileHeader } from "../../components";
+import { ProfileFooter, ProfileHeader } from "../../components";
 import {
   Hero,
   JobExperience,
@@ -16,6 +16,7 @@ const Profile: React.FC = () => {
       <JobExperience />
       <Tools />
       <SideHustles />
+      <ProfileFooter />
     </>
   );
 };
