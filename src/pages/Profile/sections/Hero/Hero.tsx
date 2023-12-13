@@ -14,7 +14,7 @@ export const Hero: React.FC = () => {
             <br /> my name is <br />
             Ieva Kaleginienė
           </h1>
-          <p className="mb-2 text-gray-300 text-xl md:text-2xl ">
+          <p className="mb-2 text-gray-300 text-xl md:text-2xl">
             I switched from sales to programming 4 years ago and still can't get
             enough! I am based in Vilnius, Lithuania.
           </p>
