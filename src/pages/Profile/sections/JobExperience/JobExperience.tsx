@@ -1,9 +1,10 @@
 import { TimeLine } from "../../../../components";
 import workingImage from "../../../../assets/images/profile/smiling_transparent.png";
 import { JOB_EXPERIENCE } from "./constants/jobExperience";
+import { SectionIds } from "../../../../components/headers/constants/sectionIds";
 
 export const JobExperience: React.FC = () => (
-  <section className="py-8">
+  <section id={SectionIds.jobExperience} className="py-8">
     <div className="container px-4">
       <h2 className="mb-8 text-center font-playFair text-4xl font-bold">
         Work Experience

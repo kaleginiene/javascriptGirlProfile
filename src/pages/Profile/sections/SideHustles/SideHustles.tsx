@@ -1,8 +1,9 @@
+import { SectionIds } from "../../../../components/headers/constants/sectionIds";
 import { SIDE_HUSTLES } from "./constants/sideHustlesList";
 
 export const SideHustles: React.FC = () => {
   return (
-    <section className="py-4">
+    <section id={SectionIds.sideHustles} className="py-4">
       <div className="md:max-w-[800px] m-auto">
         <h2 className="mb-8 text-center font-playFair text-4xl font-bold">
           Side hustles
