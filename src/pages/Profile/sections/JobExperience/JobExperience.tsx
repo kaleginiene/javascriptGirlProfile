@@ -1,7 +1,7 @@
-import { TimeLine } from "../../../../components";
-import workingImage from "../../../../assets/images/profile/smiling_transparent.png";
+import { TimeLine } from "src/components";
+import workingImage from "src/assets/images/profile/smiling_transparent.png";
 import { JOB_EXPERIENCE } from "./constants/jobExperience";
-import { SectionIds } from "../../../../components/headers/constants/sectionIds";
+import { SectionIds } from "src/components/headers/constants/sectionIds";
 
 export const JobExperience: React.FC = () => (
   <section id={SectionIds.jobExperience} className="py-8">

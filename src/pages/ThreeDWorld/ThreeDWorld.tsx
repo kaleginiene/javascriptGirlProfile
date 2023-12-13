@@ -1,11 +1,11 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 
-import { Header, Loader, PopUpsList } from "../../components";
-import Island from "../../models/Island";
-import Sky from "../../models/Sky";
-import Plane from "../../models/Plane";
-import Balloon from "../../models/Balloon";
+import { Header, Loader, PopUpsList } from "src/components";
+import Island from "src/models/Island";
+import Sky from "src/models/Sky";
+import Plane from "src/models/Plane";
+import Balloon from "src/models/Balloon";
 import { use3DModels } from "./use3DModels";
 
 const ThreeDWorld: React.FC = () => {

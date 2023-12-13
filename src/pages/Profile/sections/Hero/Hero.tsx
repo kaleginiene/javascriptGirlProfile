@@ -1,5 +1,5 @@
-import { SocialMedia } from "../../../../constants/contacts";
-import heroImage from "../../../../assets/images/profile/hero_photo.png";
+import { SocialMedia } from "src/constants/contacts";
+import heroImage from "src/assets/images/profile/hero_photo.png";
 
 export const Hero: React.FC = () => {
   return (

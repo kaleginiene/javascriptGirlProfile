@@ -1,3 +1,4 @@
+export * from "./AboutMe/AboutMe";
 export * from "./Hero/Hero";
 export * from "./JobExperience/JobExperience";
 export * from "./SideHustles/SideHustles";

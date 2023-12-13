@@ -1,4 +1,4 @@
-import { SectionIds } from "../../../../components/headers/constants/sectionIds";
+import { SectionIds } from "src/components/headers/constants/sectionIds";
 import { SIDE_HUSTLES } from "./constants/sideHustlesList";
 
 export const SideHustles: React.FC = () => {
