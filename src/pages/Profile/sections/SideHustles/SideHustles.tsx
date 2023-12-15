@@ -30,11 +30,21 @@ export const SideHustles: React.FC = () => {
                 className="project-image object-cover max-h-[320px] md:max-h-none md:w-[50%] md:rounded-se-3xl md:rounded-ee-3xl"
                 src={photo}
                 alt={title}
+                draggable={false}
               />
             </div>
           )
         )}
       </div>
+      <a
+        href={"src/assets/documents/Ieva.Kaleginiene.CV.pdf"}
+        download
+        className="block m-auto"
+      >
+        <div className="block w-[250px] m-auto mt-8 profile-btn">
+          Download CV
+        </div>
+      </a>
     </section>
   );
 };
