@@ -3,10 +3,10 @@ import { Canvas } from "@react-three/fiber";
 
 import { Header, Loader, PopUpsList } from "src/components";
 import Island from "src/models/Island";
-import Sky from "src/models/Sky";
 import Plane from "src/models/Plane";
 import Balloon from "src/models/Balloon";
 import { use3DModels } from "./use3DModels";
+import ShrekModel from "src/models/Shrek";
 
 const ThreeDWorld: React.FC = () => {
   const {
@@ -47,8 +47,6 @@ const ThreeDWorld: React.FC = () => {
             groundColor="#000000"
             intensity={1}
           />
-
-          <Sky isRotating={isRotating} />
           <Balloon
             isRotating={isRotating}
             position={balloonPosition}
@@ -63,6 +61,8 @@ const ThreeDWorld: React.FC = () => {
             isRotating={isRotating}
             setIsRotating={setIsRotating}
           />
+          <ShrekModel scale={[0.8, 0.8, 0.8]} position={[0, -2, 0]} />
+
           <Plane
             isRotating={isRotating}
             position={planePosition}

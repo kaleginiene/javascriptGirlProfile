@@ -30,7 +30,7 @@ export const use3DModels = (): Use3DModelsReturn => {
     if (window.innerWidth < 768) {
       screenScale = [0.9, 0.9, 0.9];
     } else {
-      screenScale = [1, 1, 1];
+      screenScale = [1.3, 1.3, 1.3];
     }
 
     return [screenScale, screenPosition, rotation];
