@@ -7,6 +7,7 @@ import Plane from "src/models/Plane";
 import Balloon from "src/models/Balloon";
 import { use3DModels } from "./use3DModels";
 import ShrekModel from "src/models/Shrek";
+import SwimmingBlueberry from "src/models/SwimmingBlueberry";
 
 const ThreeDWorld: React.FC = () => {
   const {
@@ -29,6 +30,7 @@ const ThreeDWorld: React.FC = () => {
     <section className="w-full h-screen relative">
       <Header />
       <PopUpsList currentStage={currentStage} />
+
       <Canvas
         camera={{
           near: 0.1,
@@ -53,6 +55,7 @@ const ThreeDWorld: React.FC = () => {
             scale={balloonScale}
             rotation={balloonRotation}
           />
+          <ShrekModel scale={[0.8, 0.8, 0.8]} position={[0, -1, 0]} />
           <Island
             setCurrentStage={setCurrentStage}
             rotation={islandRotation}
@@ -61,8 +64,11 @@ const ThreeDWorld: React.FC = () => {
             isRotating={isRotating}
             setIsRotating={setIsRotating}
           />
-          <ShrekModel scale={[0.8, 0.8, 0.8]} position={[0, -2, 0]} />
-
+          <SwimmingBlueberry
+            scale={[0.1, 0.1, 0.1]}
+            position={[-5, -3, -1]}
+            rotation={[0.2, 0.3, -0.2]}
+          />
           <Plane
             isRotating={isRotating}
             position={planePosition}

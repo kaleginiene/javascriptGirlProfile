@@ -2,7 +2,7 @@ import React from "react";
 import { BasePopUp } from "./BasePopPup";
 import { PopUpProps } from "../popUpTypes";
 import { useNavigate } from "react-router-dom";
-import { RouteNames } from "../../../routes/routes";
+import { RouteNames } from "../../../routes/routeNames";
 
 const TextBox: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => (
   <>

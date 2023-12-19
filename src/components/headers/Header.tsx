@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { RouteNames } from "../../routes/routes";
+import { RouteNames } from "../../routes/routeNames";
 
 export const Header: React.FC = () => {
   return (

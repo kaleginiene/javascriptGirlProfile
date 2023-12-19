@@ -19,8 +19,6 @@ const ShrekModel: React.FC<ModelProps> = (props) => {
   const { nodes, materials, animations } = useGLTF(shrekScene);
   const { actions } = useAnimations(animations, group);
 
-  console.log(actions);
-
   useEffect(() => {
     actions["mixamo.com"]?.play();
   }, [actions]);

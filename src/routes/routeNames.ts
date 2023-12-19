@@ -1,4 +1,4 @@
 export enum RouteNames {
   home = "/",
-  profile = "/profile",
+  threeD = "/3d-world",
 }
