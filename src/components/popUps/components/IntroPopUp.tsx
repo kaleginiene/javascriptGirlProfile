@@ -20,7 +20,7 @@ interface CtaBoxProps {
 }
 
 const CtaBox: React.FC<CtaBoxProps> = ({ onClick }) => (
-  <button onClick={onClick} className="neo-brutalism-white neo-btn">
+  <button onClick={onClick} className="neo-brutalism-white dark-3d-btn">
     Check it out!
   </button>
 );

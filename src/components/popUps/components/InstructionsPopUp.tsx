@@ -24,10 +24,13 @@ interface CtaBoxProps {
 
 const CtaBox: React.FC<CtaBoxProps> = ({ onClassicCVClick, onOkClick }) => (
   <div className="flex w-full gap-10">
-    <button onClick={onClassicCVClick} className="neo-brutalism-white neo-btn">
+    <button
+      onClick={onClassicCVClick}
+      className="neo-brutalism-white dark-3d-btn"
+    >
       Give me a classic CV
     </button>
-    <button onClick={onOkClick} className="neo-brutalism-white neo-btn">
+    <button onClick={onOkClick} className="neo-brutalism-white dark-3d-btn">
       Let's fly
     </button>
   </div>
