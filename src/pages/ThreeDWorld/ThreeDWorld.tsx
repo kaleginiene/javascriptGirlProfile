@@ -6,7 +6,6 @@ import Island from "src/models/Island/Island";
 import Plane from "src/models/Plane/Plane";
 import Balloon from "src/models/Ballon/Balloon";
 import ShrekModel from "src/models/Shrek/Shrek";
-// import SwimmingBlueberry from "src/models/SwimmingBlueberry/SwimmingBlueberry";
 
 import { use3DModels } from "./use3DModels";
 import { islandRotationContext } from "src/contexts/islandRotationContext";
@@ -66,11 +65,6 @@ const ThreeDWorld: React.FC = () => {
             position={islandPosition}
             scale={islandScale}
           />
-          {/* <SwimmingBlueberry
-            scale={[0.1, 0.1, 0.1]}
-            position={[-5, -3, -1]}
-            rotation={[0.2, 0.3, -0.2]}
-          /> */}
           <Plane
             isRotating={isRotating}
             position={planePosition}
