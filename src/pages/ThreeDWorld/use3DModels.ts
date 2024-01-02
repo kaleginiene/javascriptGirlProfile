@@ -36,7 +36,7 @@ export const use3DModels = (): Use3DModelsReturn => {
     const ROTATION: XYZParams = [0, 20, 0];
 
     if (window.innerWidth < 768) {
-      screenScale = [0.2, 0.2, 0.2];
+      screenScale = [0.15, 0.15, 0.15];
       screenPosition = [0, -1.5, 0];
     } else {
       screenScale = [0.3, 0.3, 0.3];

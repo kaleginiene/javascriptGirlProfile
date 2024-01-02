@@ -1,6 +1,8 @@
 // import { Link } from "react-router-dom";
 import logo from "src/assets/images/logo.png";
 import { SectionIds } from "./constants/sectionIds";
+import { Link } from "react-router-dom";
+import { RouteNames } from "src/routes/routeNames";
 // import { RouteNames } from "src/routes/routeNames";
 
 interface NavItem {
@@ -41,9 +43,9 @@ export const ProfileHeader: React.FC = () => {
               {title}
             </h6>
           ))}
-          {/* <Link to={RouteNames.threeD}>
-            <h6 className="cursor-pointer">3D world </h6>
-          </Link> */}
+          <Link to={RouteNames.threeD}>
+            <h6 className="cursor-pointer">3D profile </h6>
+          </Link>
         </div>
       </nav>
     </header>

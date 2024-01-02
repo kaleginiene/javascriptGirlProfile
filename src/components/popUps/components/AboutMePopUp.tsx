@@ -38,7 +38,7 @@ export const AboutMePopUp: React.FC<PopUpProps> = ({ onNextButtonClick }) => {
   return (
     <>
       <div
-        className={`absolute top-28 md:left-28 -left-5 right-0 z-10 md:max-w-xxl max-w-l`}
+        className={`absolute top-28 md:left-28 left-[-15px] right-0 z-10 md:max-w-xxl max-w-[98%]`}
       >
         <BasePopUp
           textBox={<TextBox />}

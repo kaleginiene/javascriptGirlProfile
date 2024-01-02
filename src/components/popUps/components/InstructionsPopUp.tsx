@@ -23,7 +23,7 @@ interface CtaBoxProps {
 }
 
 const CtaBox: React.FC<CtaBoxProps> = ({ onClassicCVClick, onOkClick }) => (
-  <div className="flex w-full gap-10">
+  <div className="flex w-full gap-3 md:gap-10">
     <button
       onClick={onClassicCVClick}
       className="neo-brutalism-white dark-3d-btn"
@@ -48,7 +48,7 @@ export const InstructionsPopUp: React.FC<PopUpProps> = ({
 
   return (
     <>
-      <div className="absolute md:top-28 top-3 md:left-0 -left-5  right-0 z-10 max-w-md">
+      <div className="absolute md:top-28 top-14 md:left-0 left-[-15px]  right-0 z-10 max-w-[98%]">
         <BasePopUp
           textBox={<TextBox isDesktop={isDesktop} />}
           ctaBox={

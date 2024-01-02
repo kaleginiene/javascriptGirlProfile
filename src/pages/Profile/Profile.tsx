@@ -1,6 +1,5 @@
 import { ProfileFooter, ProfileHeader } from "src/components";
 import {
-  AboutMe,
   Hero,
   JobExperience,
   SideHustles,
@@ -16,7 +15,6 @@ const Profile: React.FC = () => (
     <JobExperience />
     <Tools />
     <SideHustles />
-    <AboutMe />
     <ProfileFooter />
   </>
 );
