@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
   AboutMePopUp,
   InstructionsPopUp,
@@ -8,41 +8,23 @@ import {
 } from "./components";
 import { AvailablePopUps } from "./popUpTypes";
 import { ContactsPopUp } from "./components/ContactsPopUp";
+import { usePopUps } from "./usePupUps";
 
 interface PopUpsListProps {
   currentStage: number | null;
 }
 
 export const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
-  const [currentPopUpKey, setCurrentPopUpKey] =
-    useState<AvailablePopUps | null>(AvailablePopUps.initial);
-  const [showedPopUps, setShowedPopUps] = useState<AvailablePopUps[]>([]);
+  const {
+    currentPopUpKey,
+    handlePopUpsRendering,
+    hidePopUp,
+    handleInstructionsPopUp,
+    setCurrentPopUpKey,
+  } = usePopUps();
 
   useEffect(() => {
-    if (
-      currentStage === 1 &&
-      currentPopUpKey !== AvailablePopUps.initial &&
-      !showedPopUps.includes(AvailablePopUps.aboutMe)
-    ) {
-      setCurrentPopUpKey(AvailablePopUps.aboutMe);
-      setShowedPopUps((prev) => [...prev, AvailablePopUps.aboutMe]);
-    } else if (
-      currentStage === 2 &&
-      !showedPopUps.includes(AvailablePopUps.jobExperience)
-    ) {
-      setCurrentPopUpKey(AvailablePopUps.jobExperience);
-      setShowedPopUps((prev) => [...prev, AvailablePopUps.jobExperience]);
-    } else if (
-      currentStage === 3 &&
-      !showedPopUps.includes(AvailablePopUps.sideWork)
-    ) {
-      setCurrentPopUpKey(AvailablePopUps.sideWork);
-      setShowedPopUps((prev) => [...prev, AvailablePopUps.sideWork]);
-    } else if (currentStage === 4) {
-      setCurrentPopUpKey(AvailablePopUps.contacts);
-      setShowedPopUps((prev) => [...prev, AvailablePopUps.contacts]);
-      showedPopUps.shift();
-    }
+    handlePopUpsRendering(currentStage);
   }, [currentStage]);
 
   return (
@@ -55,24 +37,19 @@ export const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
         />
       )}
       {currentPopUpKey === AvailablePopUps.instructions && (
-        <InstructionsPopUp
-          onNextButtonClick={() => {
-            setCurrentPopUpKey(AvailablePopUps.aboutMe);
-            setShowedPopUps((prev) => [...prev, AvailablePopUps.aboutMe]);
-          }}
-        />
+        <InstructionsPopUp onNextButtonClick={handleInstructionsPopUp} />
       )}
       {currentPopUpKey === AvailablePopUps.aboutMe && (
-        <AboutMePopUp onNextButtonClick={() => setCurrentPopUpKey(null)} />
+        <AboutMePopUp onNextButtonClick={hidePopUp} />
       )}
       {currentPopUpKey === AvailablePopUps.jobExperience && (
-        <JobExpPopUp onNextButtonClick={() => setCurrentPopUpKey(null)} />
+        <JobExpPopUp onNextButtonClick={hidePopUp} />
       )}
       {currentPopUpKey === AvailablePopUps.sideWork && (
-        <SideWorkPopUp onNextButtonClick={() => setCurrentPopUpKey(null)} />
+        <SideWorkPopUp onNextButtonClick={hidePopUp} />
       )}
       {currentPopUpKey === AvailablePopUps.contacts && (
-        <ContactsPopUp onNextButtonClick={() => setCurrentPopUpKey(null)} />
+        <ContactsPopUp onNextButtonClick={hidePopUp} />
       )}
     </>
   );

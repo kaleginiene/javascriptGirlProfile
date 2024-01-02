@@ -46,7 +46,7 @@ export const SideWorkPopUp: React.FC<PopUpProps> = ({ onNextButtonClick }) => {
   return (
     <>
       <div
-        className={`absolute top-28 md:left-[200px] z-10 md:max-w-xxl left-[-15px] mx-2 w-[95%] md:w-full`}
+        className={`absolute top-14 md:left-[200px] z-10 md:max-w-xxl left-[-15px] mx-2 w-[95%] md:w-full`}
       >
         <BasePopUp
           textBox={<TextBox />}

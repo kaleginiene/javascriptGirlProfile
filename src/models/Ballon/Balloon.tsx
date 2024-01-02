@@ -8,13 +8,13 @@ import { ModelProps } from "../Island/Island";
 const Balloon: React.FC<ModelProps> = ({ ...props }) => {
   const ref = useRef<any>();
   // @ts-ignore
-  // Not well typed hook
+  // NOTE: Not well typed hook
   const { scene, animations } = useGLTF(planeScene);
   const { actions } = useAnimations(animations, ref);
 
   useEffect(() => {
     actions["Animation"]?.play();
-  }, []);
+  }, [actions]);
 
   return (
     <mesh {...props} ref={ref}>

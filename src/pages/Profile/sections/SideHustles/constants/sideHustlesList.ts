@@ -1,7 +1,7 @@
-import academy from "../../../../../assets/images/profile/academy.jpeg";
-import wgt from "../../../../../assets/images/profile/wgt.png";
-import linkedin from "../../../../../assets/images/profile/linkedin.jpg";
-import literallySmarter from "../../../../../assets/images/profile/literally_smarter.jpg";
+import academy from "src/assets/images/profile/academy.webp";
+import wgt from "src/assets/images/profile/wgt.webp";
+import linkedin from "src/assets/images/profile/linkedin.webp";
+import literallySmarter from "src/assets/images/profile/literally_smarter.webp";
 
 export interface SideHustle {
   title: string;

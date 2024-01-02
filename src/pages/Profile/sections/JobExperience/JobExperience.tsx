@@ -1,5 +1,5 @@
 import { TimeLine } from "src/components";
-import workingImage from "src/assets/images/profile/smiling_transparent.png";
+import workingImage from "src/assets/images/profile/smiling_transparent.webp";
 import { SectionIds } from "src/components/headers/constants/sectionIds";
 
 import { JOB_EXPERIENCE } from "./constants/jobExperience";

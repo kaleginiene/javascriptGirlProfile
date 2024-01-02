@@ -1,5 +1,5 @@
 // import { Link } from "react-router-dom";
-import logo from "src/assets/images/logo.png";
+import logo from "src/assets/images/logo.webp";
 import { SectionIds } from "./constants/sectionIds";
 import { Link } from "react-router-dom";
 import { RouteNames } from "src/routes/routeNames";

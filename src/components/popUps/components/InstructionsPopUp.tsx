@@ -48,7 +48,7 @@ export const InstructionsPopUp: React.FC<PopUpProps> = ({
 
   return (
     <>
-      <div className="absolute md:top-28 top-14 md:left-0 left-[-15px]  right-0 z-10 max-w-[98%]">
+      <div className="absolute md:top-28 top-14 md:left-0 left-[-15px]  right-0 z-10 md:max-w-md max-w-[98%]">
         <BasePopUp
           textBox={<TextBox isDesktop={isDesktop} />}
           ctaBox={

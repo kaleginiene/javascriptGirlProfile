@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import profilePhoto from "../../../assets/images/ieva.jpg";
+import profilePhoto from "src/assets/images/ieva.webp";
 
 interface BasePopUpProps {
   textBox?: ReactNode;

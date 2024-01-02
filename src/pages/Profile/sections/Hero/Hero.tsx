@@ -1,5 +1,5 @@
 import { SocialMedia } from "src/constants/contacts";
-import heroImage from "src/assets/images/profile/hero_photo.png";
+import heroImage from "src/assets/images/profile/hero_photo.webp";
 
 export const Hero: React.FC = () => {
   return (

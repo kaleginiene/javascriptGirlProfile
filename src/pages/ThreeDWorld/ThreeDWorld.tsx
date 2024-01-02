@@ -25,8 +25,10 @@ const ThreeDWorld: React.FC = () => {
     planeRotation,
   } = use3DModels();
 
+  console.log(currentStage);
+
   return (
-    <section className="w-full h-screen relative">
+    <section className="w-full h-screen fixed">
       <Header />
       <PopUpsList currentStage={currentStage} />
 
