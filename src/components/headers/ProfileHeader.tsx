@@ -1,5 +1,7 @@
+// import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { SectionIds } from "./constants/sectionIds";
+// import { RouteNames } from "src/routes/routeNames";
 
 interface NavItem {
   sectionToScroll: SectionIds;
@@ -29,7 +31,7 @@ export const ProfileHeader: React.FC = () => {
     <header>
       <nav className="container flex justify-between items-center py-1 mb-3">
         <img className="w-[100px]" src={logo} />
-        <div className="flex gap-8 font-raleway">
+        <div className="flex gap-8 font-raleway pr-4">
           {NAV_LIST.map(({ sectionToScroll, title }, index) => (
             <h6
               key={`${title}_${index}`}
@@ -39,6 +41,9 @@ export const ProfileHeader: React.FC = () => {
               {title}
             </h6>
           ))}
+          {/* <Link to={RouteNames.threeD}>
+            <h6 className="cursor-pointer">3D world </h6>
+          </Link> */}
         </div>
       </nav>
     </header>

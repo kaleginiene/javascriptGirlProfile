@@ -20,8 +20,8 @@ export const JobExperience: React.FC = () => (
       <TimeLine timeLineEvents={JOB_EXPERIENCE} />
     </div>
     <a
-      href={"src/assets/documents/Ieva.Kaleginiene.CV.pdf"}
-      download
+      href={"assets/documents/Ieva.Kaleginiene.CV.pdf"}
+      download="Ieva.Kaleginiene.CV.pdf"
       className="block m-auto"
     >
       <div className="block w-[250px] m-auto mt-8 profile-btn">Download CV</div>

@@ -16,7 +16,7 @@ export const SIDE_HUSTLES: SideHustle[] = [
     title: "React JS Lecturer",
     subtitle: "@Kilo Academy",
     description:
-      "I've mentored/lectured two React JS courses at Kilo Academy. Schedule of one course - 3 hours two times a week for two months. During one course, I've been lecturing 10 students. In total, I've been mentoring 20 students.",
+      "I've mentored/lectured two React JS courses at Kilo Academy. I've been mentoring 20 students in total. More than 100 hours of lecturing!",
     date: "September 2021 - June 2022",
     photo: academy,
   },

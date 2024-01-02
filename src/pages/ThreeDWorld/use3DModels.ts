@@ -1,5 +1,3 @@
-import { Dispatch, SetStateAction, useState } from "react";
-
 export type XYZParams = [number, number, number];
 
 interface Use3DModelsReturn {
@@ -12,16 +10,9 @@ interface Use3DModelsReturn {
   balloonPosition: XYZParams;
   balloonRotation: XYZParams;
   balloonScale: XYZParams;
-  isRotating: boolean;
-  currentStage: number | null;
-  setIsRotating: Dispatch<SetStateAction<boolean>>;
-  setCurrentStage: Dispatch<SetStateAction<number | null>>;
 }
 
 export const use3DModels = (): Use3DModelsReturn => {
-  const [isRotating, setIsRotating] = useState<boolean>(false);
-  const [currentStage, setCurrentStage] = useState<number | null>(1);
-
   const adjustIslandForScreenSize = (): XYZParams[] => {
     let screenScale: XYZParams = [] as unknown as XYZParams;
     const screenPosition: XYZParams = [0, -6.5, -43];
@@ -77,9 +68,5 @@ export const use3DModels = (): Use3DModelsReturn => {
     planeScale,
     planePosition,
     planeRotation,
-    isRotating,
-    currentStage,
-    setIsRotating,
-    setCurrentStage,
   };
 };

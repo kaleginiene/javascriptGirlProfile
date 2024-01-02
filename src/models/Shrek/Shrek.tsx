@@ -10,7 +10,7 @@ Title: Shrek Hip Hop Dance
 import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import shrekScene from "src/assets/3d/shrek_hip_hop_dance.glb";
-import { ModelProps } from "./Island";
+import { ModelProps } from "../Island/Island";
 
 const ShrekModel: React.FC<ModelProps> = (props) => {
   const group = useRef<any>();

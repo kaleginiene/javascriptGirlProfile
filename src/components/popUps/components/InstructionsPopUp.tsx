@@ -40,7 +40,7 @@ export const InstructionsPopUp: React.FC<PopUpProps> = ({
   const isDesktop: boolean = window.screen.width > 768;
 
   const navigateToProfilePage = (): void => {
-    navigate(RouteNames.profile);
+    navigate(RouteNames.home);
   };
 
   return (

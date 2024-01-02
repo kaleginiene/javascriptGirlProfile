@@ -19,7 +19,7 @@ export const ProfileFooter: React.FC = () => {
           </a>
         </div>
         <p className="text-center text-s text-gray-300 font-raleway">
-          Ieva Kaleginienė, 2024
+          Ieva Kaleginienė, {new Date().getFullYear()}
         </p>
       </div>
     </footer>

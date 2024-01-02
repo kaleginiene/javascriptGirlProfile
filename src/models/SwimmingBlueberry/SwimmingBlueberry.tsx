@@ -1,17 +1,17 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import blueberryScene from "../assets/3d/blueberry_on_vacation.glb";
-import { ModelProps } from "./Island";
+import blueberryScene from "src/assets/3d/blueberry_on_vacation.glb";
+import { ModelProps } from "../Island/Island";
 
 const SwimmingBlueberry: React.FC<ModelProps> = (props) => {
-  const group = useRef<any>();
+  const blueberryRef = useRef<any>();
 
   // @ts-ignore
   const { nodes, materials } = useGLTF(blueberryScene);
 
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={blueberryRef} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.012}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <mesh

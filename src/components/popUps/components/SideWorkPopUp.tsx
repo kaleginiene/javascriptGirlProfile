@@ -19,9 +19,8 @@ const TextBox: React.FC = () => (
     </div>
     <p className="font-medium">
       I've lectured React JS for 20 students in total (two batches of 10).
-      Schedule of one course - 3 hours two times a week for two months. Prepared
-      all the teaching materials, candidate selection for the Academy,
-      lecturing.
+      Prepared all the teaching materials, candidate selection for the Academy,
+      lecturing. More than 100 hours of lecturing!
     </p>
     <div className="flex gap-3 mt-3">
       <p>2021.08 - 2022-08</p>

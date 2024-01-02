@@ -8,12 +8,13 @@ Source: https://sketchfab.com/3d-models/foxs-islands-163b68e09fcc47618450150be77
 Title: Fox's islands
 */
 
-import React, { useRef, useEffect, Dispatch, SetStateAction, Ref } from "react";
+import React, { useRef, useEffect, Ref, useContext } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { a } from "@react-spring/three";
 import islandScene from "src/assets/3d/tropical_island.glb";
 import { Group, Object3DEventMap } from "three";
+import { islandRotationContext } from "src/contexts/islandRotationContext";
 
 export interface ModelProps {
   position?: [number, number, number];
@@ -22,19 +23,13 @@ export interface ModelProps {
   isRotating?: boolean;
 }
 
-interface IslandProps extends ModelProps {
-  setIsRotating: Dispatch<SetStateAction<boolean>>;
-  setCurrentStage: Dispatch<SetStateAction<number | null>>;
-}
-
-const Island: React.FC<IslandProps> = ({
-  isRotating,
-  setIsRotating,
-  setCurrentStage,
-  ...props
-}) => {
+const Island: React.FC<ModelProps> = ({ ...props }) => {
+  const { isRotating, setCurrentStage, setIsRotating } = useContext(
+    islandRotationContext
+  );
   const islandRef = useRef<Ref<Group<Object3DEventMap>> | null>(null);
 
+  // TODO: Make this component more readable!
   const { gl, viewport } = useThree();
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore

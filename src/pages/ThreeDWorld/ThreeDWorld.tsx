@@ -1,15 +1,18 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useContext } from "react";
 import { Canvas } from "@react-three/fiber";
 
 import { Header, Loader, PopUpsList } from "src/components";
-import Island from "src/models/Island";
-import Plane from "src/models/Plane";
-import Balloon from "src/models/Balloon";
+import Island from "src/models/Island/Island";
+import Plane from "src/models/Plane/Plane";
+import Balloon from "src/models/Ballon/Balloon";
+import ShrekModel from "src/models/Shrek/Shrek";
+// import SwimmingBlueberry from "src/models/SwimmingBlueberry/SwimmingBlueberry";
+
 import { use3DModels } from "./use3DModels";
-import ShrekModel from "src/models/Shrek";
-import SwimmingBlueberry from "src/models/SwimmingBlueberry";
+import { islandRotationContext } from "src/contexts/islandRotationContext";
 
 const ThreeDWorld: React.FC = () => {
+  const { isRotating, currentStage } = useContext(islandRotationContext);
   const {
     balloonPosition,
     balloonRotation,
@@ -20,10 +23,6 @@ const ThreeDWorld: React.FC = () => {
     planeScale,
     planePosition,
     planeRotation,
-    isRotating,
-    currentStage,
-    setIsRotating,
-    setCurrentStage,
   } = use3DModels();
 
   return (
@@ -55,20 +54,21 @@ const ThreeDWorld: React.FC = () => {
             scale={balloonScale}
             rotation={balloonRotation}
           />
-          <ShrekModel scale={[0.8, 0.8, 0.8]} position={[0, -1, 0]} />
+          <ShrekModel
+            isRotating={isRotating}
+            scale={[0.7, 0.7, 0.7]}
+            position={[0, -1, 0]}
+          />
           <Island
-            setCurrentStage={setCurrentStage}
             rotation={islandRotation}
             position={islandPosition}
             scale={islandScale}
-            isRotating={isRotating}
-            setIsRotating={setIsRotating}
           />
-          <SwimmingBlueberry
+          {/* <SwimmingBlueberry
             scale={[0.1, 0.1, 0.1]}
             position={[-5, -3, -1]}
             rotation={[0.2, 0.3, -0.2]}
-          />
+          /> */}
           <Plane
             isRotating={isRotating}
             position={planePosition}

@@ -2,10 +2,10 @@
 import React, { useEffect, useRef } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
 
-import planeScene from "../assets/3d/balloon.glb";
-import { ModelProps } from "./Island";
+import planeScene from "src/assets/3d/plane.glb";
+import { ModelProps } from "../Island/Island";
 
-const Balloon: React.FC<ModelProps> = ({ ...props }) => {
+const Plane: React.FC<ModelProps> = ({ isRotating, ...props }) => {
   const ref = useRef<any>();
   // @ts-ignore
   // Not well typed hook
@@ -13,8 +13,12 @@ const Balloon: React.FC<ModelProps> = ({ ...props }) => {
   const { actions } = useAnimations(animations, ref);
 
   useEffect(() => {
-    actions["Animation"]?.play();
-  }, []);
+    if (isRotating) {
+      actions["Take 001"]?.play();
+    } else {
+      actions["Take 001"]?.stop();
+    }
+  }, [actions, isRotating]);
 
   return (
     <mesh {...props} ref={ref}>
@@ -23,4 +27,4 @@ const Balloon: React.FC<ModelProps> = ({ ...props }) => {
   );
 };
 
-export default Balloon;
+export default Plane;

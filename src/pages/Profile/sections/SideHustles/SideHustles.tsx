@@ -37,8 +37,8 @@ export const SideHustles: React.FC = () => {
         )}
       </div>
       <a
-        href={"src/assets/documents/Ieva.Kaleginiene.CV.pdf"}
-        download
+        href={"assets/documents/Ieva.Kaleginiene.CV.pdf"}
+        download="Ieva.Kaleginiene.CV.pdf"
         className="block m-auto"
       >
         <div className="block w-[250px] m-auto mt-8 profile-btn">
