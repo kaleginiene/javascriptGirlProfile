@@ -10,10 +10,15 @@ Also, I've created a single page, where you can see all details of my profession
 
 ## :hammer_and_wrench: Tools I used
 
-- Vite
-- React
-- TypeScript
-- TailWind
-- Three.js
+- Vite;
+- React;
+- TypeScript;
+- TailWind;
+- Three.js.
 
-### :spider_web:	Link to production page [uzprogramuosiuviska.lt](https://uzprogramuosiuviska.lt/)
+### :spider_web:	Production page [uzprogramuosiuviska.lt](https://uzprogramuosiuviska.lt/)
+
+### :rocket: To run  this project: 
+- Clone repository;
+- npm install or yarn install;
+- "npm run dev" or "yarn dev";
