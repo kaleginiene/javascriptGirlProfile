@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import {
   AboutMePopUp,
+  AboutProjectPopUp,
   InstructionsPopUp,
   IntroPopUp,
   JobExpPopUp,
@@ -50,6 +51,9 @@ export const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
       )}
       {currentPopUpKey === AvailablePopUps.contacts && (
         <ContactsPopUp onNextButtonClick={hidePopUp} />
+      )}
+      {currentPopUpKey === AvailablePopUps.aboutProject && (
+        <AboutProjectPopUp onNextButtonClick={hidePopUp} />
       )}
     </>
   );

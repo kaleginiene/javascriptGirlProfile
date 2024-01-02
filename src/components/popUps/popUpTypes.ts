@@ -4,9 +4,10 @@ export interface PopUpProps {
 
 export enum AvailablePopUps {
   aboutMe,
-  contacts,
   initial,
   instructions,
   jobExperience,
   sideWork,
+  contacts,
+  aboutProject,
 }

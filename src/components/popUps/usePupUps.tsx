@@ -37,6 +37,10 @@ export const usePopUps = (): UsePopUpsReturn => {
       setCurrentPopUpKey(AvailablePopUps.sideWork);
       setShowedPopUps((prev) => [...prev, AvailablePopUps.sideWork]);
     } else if (currentStage === 4) {
+      setCurrentPopUpKey(AvailablePopUps.aboutProject);
+      setShowedPopUps((prev) => [...prev, AvailablePopUps.aboutProject]);
+      showedPopUps.shift();
+    } else if (currentStage === 5) {
       setCurrentPopUpKey(AvailablePopUps.contacts);
       setShowedPopUps((prev) => [...prev, AvailablePopUps.contacts]);
       showedPopUps.shift();
