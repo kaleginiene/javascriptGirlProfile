@@ -1,7 +1,7 @@
 import React from "react";
 import { BasePopUp } from "./BasePopPup";
 import { PopUpProps } from "../popUpTypes";
-import { GithubLinks, SocialMedia } from "src/constants/contacts";
+import { GithubLinks } from "src/constants/contacts";
 
 const TextBox: React.FC = () => (
   <>
@@ -39,9 +39,7 @@ interface CtaBoxProps {
 
 const CtaBox: React.FC<CtaBoxProps> = ({ onClick }) => (
   <button onClick={onClick} className="neo-brutalism-white dark-3d-btn">
-    <a href={SocialMedia.linkedin} target="_blank">
-      OK
-    </a>
+    OK
   </button>
 );
 
