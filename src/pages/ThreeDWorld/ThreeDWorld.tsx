@@ -1,7 +1,8 @@
 import React, { Suspense, useContext } from "react";
 import { Canvas } from "@react-three/fiber";
 
-import { Header, Loader, PopUpsList } from "src/components";
+import { Header, Loader } from "src/components";
+import PopUpsList from "src/components/popUps/PopUpsList";
 import Island from "src/models/Island/Island";
 import Plane from "src/models/Plane/Plane";
 import Balloon from "src/models/Ballon/Balloon";
@@ -44,11 +45,7 @@ const ThreeDWorld: React.FC = () => {
           <directionalLight position={[1, 1, 1]} intensity={2} />
           <ambientLight intensity={0.2} />
           <spotLight />
-          <hemisphereLight
-            color="#b1e1FF"
-            groundColor="#000000"
-            intensity={1}
-          />
+          <hemisphereLight intensity={1} />
           <Balloon
             isRotating={isRotating}
             position={balloonPosition}

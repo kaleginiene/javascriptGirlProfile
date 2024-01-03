@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Route, HashRouter, Routes } from "react-router-dom";
 
 import { IslandRotationContextProvider } from "src/contexts/IslandRotationContextProvider";
 import Profile from "src/pages/Profile/Profile";
@@ -9,7 +9,7 @@ import { RouteNames } from "./routeNames";
 
 export const Router: React.FC = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path={RouteNames.home} element={<Profile />} />
         <Route
@@ -21,6 +21,6 @@ export const Router: React.FC = () => {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };

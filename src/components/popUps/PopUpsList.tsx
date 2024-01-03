@@ -15,7 +15,7 @@ interface PopUpsListProps {
   currentStage: number | null;
 }
 
-export const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
+const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
   const {
     currentPopUpKey,
     handlePopUpsRendering,
@@ -58,3 +58,5 @@ export const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
     </>
   );
 };
+
+export default PopUpsList;

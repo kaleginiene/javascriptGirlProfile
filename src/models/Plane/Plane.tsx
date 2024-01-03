@@ -3,14 +3,14 @@ import React, { useEffect, useRef } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
 
 import planeScene from "src/assets/3d/plane.glb";
-import { ModelProps } from "../Island/Island";
+import { ModelProps } from "../modelsTypes";
 
 const Plane: React.FC<ModelProps> = ({ isRotating, ...props }) => {
-  const ref = useRef<any>();
+  const planeRef = useRef<any>();
   // @ts-ignore
-  // Not well typed hook
+  // NOTE: Not well typed hook
   const { scene, animations } = useGLTF(planeScene);
-  const { actions } = useAnimations(animations, ref);
+  const { actions } = useAnimations(animations, planeRef);
 
   useEffect(() => {
     if (isRotating) {
@@ -21,7 +21,7 @@ const Plane: React.FC<ModelProps> = ({ isRotating, ...props }) => {
   }, [actions, isRotating]);
 
   return (
-    <mesh {...props} ref={ref}>
+    <mesh {...props} ref={planeRef}>
       <primitive object={scene} />
     </mesh>
   );

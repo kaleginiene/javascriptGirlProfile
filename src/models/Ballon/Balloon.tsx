@@ -3,21 +3,21 @@ import React, { useEffect, useRef } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
 
 import planeScene from "src/assets/3d/balloon.glb";
-import { ModelProps } from "../Island/Island";
+import { ModelProps } from "../modelsTypes";
 
 const Balloon: React.FC<ModelProps> = ({ ...props }) => {
-  const ref = useRef<any>();
+  const balloonRef = useRef<any>();
   // @ts-ignore
   // NOTE: Not well typed hook
   const { scene, animations } = useGLTF(planeScene);
-  const { actions } = useAnimations(animations, ref);
+  const { actions } = useAnimations(animations, balloonRef);
 
   useEffect(() => {
     actions["Animation"]?.play();
   }, [actions]);
 
   return (
-    <mesh {...props} ref={ref}>
+    <mesh {...props} ref={balloonRef}>
       <primitive object={scene} />
     </mesh>
   );
