@@ -13,9 +13,10 @@ import { usePopUps } from "./usePupUps";
 
 interface PopUpsListProps {
   currentStage: number | null;
+  isLoaded: boolean;
 }
 
-const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
+const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage, isLoaded }) => {
   const {
     currentPopUpKey,
     handlePopUpsRendering,
@@ -26,7 +27,9 @@ const PopUpsList: React.FC<PopUpsListProps> = ({ currentStage }) => {
 
   useEffect(() => {
     handlePopUpsRendering(currentStage);
-  }, [currentStage]);
+  }, [currentStage, isLoaded]);
+
+  if (!isLoaded) return null;
 
   return (
     <>

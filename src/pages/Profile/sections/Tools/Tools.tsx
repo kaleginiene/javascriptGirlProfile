@@ -7,6 +7,7 @@ import {
 
 const renderCard = ({ icon, backgroundColor, title }: TOOL): JSX.Element => (
   <div
+    key={title}
     className={`p-2 flex flex-col justify-between rounded-md text-center ${backgroundColor}`}
   >
     <img className="m-auto" src={icon} width={20} alt="React Icon" />

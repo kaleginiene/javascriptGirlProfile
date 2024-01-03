@@ -15,8 +15,8 @@ export const TimeLine: React.FC<TimeLineProps> = ({ timeLineEvents }) => {
 
   return (
     <ol className="relative max-w-full border-s border-pink-300 dark:border-gray-700">
-      {timeLineEvents.map(({ date, title, description }) => (
-        <li className="mb-10 ms-4">
+      {timeLineEvents.map(({ date, title, description }, index) => (
+        <li key={`${index}${title}`} className="mb-10 ms-4">
           <div className="absolute w-3 h-3 bg-pink-300 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:pink-300"></div>
           <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
             {date}
